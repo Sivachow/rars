@@ -76,6 +76,9 @@ public class Editor {
         return editTabbedPane.getOpenFilePaths();
     }
 
+    public String[] getSavedOpenFilePaths() {
+        return editTabbedPane.getAllSavedFiles();
+    }
     /**
      * Set associated EditTabbedPane.  This is container for any/all open files.
      *

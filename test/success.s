@@ -1,4 +1,4 @@
-.globl main
+
 .text
 main:
 	# Simple test to confirm the success code works

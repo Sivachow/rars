@@ -1,4 +1,4 @@
-.globl main
+
 .data
 buffer: .space 8
 .text

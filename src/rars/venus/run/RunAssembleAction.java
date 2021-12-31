@@ -90,13 +90,14 @@ public class RunAssembleAction extends GuiAction {
                             new File(FileStatus.getName()).getParent(), Globals.fileExtensions);
                 } else {
                     filesToAssemble = new ArrayList<>();
-                    filesToAssemble.add(FileStatus.getName());
+
                 }
                 if (Globals.getSettings().getBooleanSetting(Settings.Bool.ASSEMBLE_OPEN)) {
                     mainUI.getEditor().saveAll();
-                    String[] paths = mainUI.getEditor().getOpenFilePaths();
+                    String[] paths = mainUI.getEditor().getSavedOpenFilePaths();
                     for (String path : paths) {
-                        if (!filesToAssemble.contains(path)) {
+                        System.out.println(path);
+                        if (!filesToAssemble.contains(path) && path != null) {
                             filesToAssemble.add(path);
                         }
                     }

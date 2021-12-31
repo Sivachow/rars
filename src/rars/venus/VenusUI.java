@@ -807,6 +807,7 @@ public class VenusUI extends JFrame {
 
 
     private void setMenuStateInitial() {
+        Assemble.setToolTipText("Save the Current file");
         fileNewAction.setEnabled(true);
         fileOpenAction.setEnabled(true);
         fileCloseAction.setEnabled(false);
@@ -843,6 +844,7 @@ public class VenusUI extends JFrame {
          Thus if there was a valid assembly it is retained. */
     void setMenuStateNotEdited() {
       /* Note: undo and redo are handled separately by the undo manager*/
+        Assemble.setToolTipText("Assemble the current file and clear breakpoints");
         fileNewAction.setEnabled(true);
         fileOpenAction.setEnabled(true);
         fileCloseAction.setEnabled(true);
@@ -878,7 +880,9 @@ public class VenusUI extends JFrame {
 
 
     void setMenuStateEditing() {
+        
       /* Note: undo and redo are handled separately by the undo manager*/
+        Assemble.setToolTipText("Assemble the current file and clear breakpoints");
         fileNewAction.setEnabled(true);
         fileOpenAction.setEnabled(true);
         fileCloseAction.setEnabled(true);
@@ -912,6 +916,7 @@ public class VenusUI extends JFrame {
      */
     void setMenuStateEditingNew() {
       /* Note: undo and redo are handled separately by the undo manager*/
+        Assemble.setToolTipText("Save the Current file");
         fileNewAction.setEnabled(true);
         fileOpenAction.setEnabled(true);
         fileCloseAction.setEnabled(true);
@@ -945,6 +950,7 @@ public class VenusUI extends JFrame {
      */
     void setMenuStateRunnable() {
       /* Note: undo and redo are handled separately by the undo manager */
+      Assemble.setToolTipText("Assemble the current file and clear breakpoints");
         fileNewAction.setEnabled(true);
         fileOpenAction.setEnabled(true);
         fileCloseAction.setEnabled(true);
@@ -978,6 +984,7 @@ public class VenusUI extends JFrame {
      */
     void setMenuStateRunning() {
       /* Note: undo and redo are handled separately by the undo manager */
+      Assemble.setToolTipText("Assemble the current file and clear breakpoints");
         fileNewAction.setEnabled(false);
         fileOpenAction.setEnabled(false);
         fileCloseAction.setEnabled(false);
@@ -1011,6 +1018,7 @@ public class VenusUI extends JFrame {
      */
     void setMenuStateTerminated() {
       /* Note: undo and redo are handled separately by the undo manager */
+      Assemble.setToolTipText("Assemble the current file and clear breakpoints");
         fileNewAction.setEnabled(true);
         fileOpenAction.setEnabled(true);
         fileCloseAction.setEnabled(true);

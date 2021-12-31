@@ -1,4 +1,4 @@
-.globl main
+
 .text
 main:
  	la t0,handler

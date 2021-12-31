@@ -439,6 +439,16 @@ public class EditTabbedPane extends JTabbedPane {
         return result;
     }
 
+    public String[] getAllSavedFiles(){
+        int tabCount = getTabCount();
+        String[] tabs = new String[tabCount];
+        for (int i = 0; i < tabCount; i++) {
+            if(((EditPane) getComponent(i)).getFileStatus() != FileStatus.NEW_EDITED &&
+            ((EditPane) getComponent(i)).getFileStatus() != FileStatus.NEW_NOT_EDITED)
+                tabs[i] = ((EditPane) getComponentAt(i)).getPathname();
+        }
+        return tabs;
+    }
     // TODO: this is too much of a hack, there needs to be a better way
     public String[] getOpenFilePaths() {
         int tabCount = getTabCount();
